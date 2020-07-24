@@ -1,0 +1,181 @@
+<?php
+ob_start();
+session_start(); ?>
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Complaints Services</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="assets/images/Untitled.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/core/menu/menu-types/horizontal-menu.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+    <style type="text/css">
+    
+      .footer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+      }
+    @media  only screen and (max-width: 500px) {
+      .footer{
+        display: none;
+      }
+      #payments{
+        display: none;
+      }
+      .uglogo{
+        width: 100%
+      }
+    }
+     .changecolor11{
+      color: #fff;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-animation: hue 60s infinite linear;
+    animation: hue 60s infinite linear;
+    } 
+    .changecolor{
+      color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+    animation: hue 60s infinite linear;
+    } 
+      @-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+      -webkit-filter: hue-rotate(-360deg);
+    }
+  } 
+
+      .tab-content > .tab-pane,
+    .pill-content > .pill-pane {
+    display: block; 
+    height: 0;
+    overflow-y: hidden;
+    }
+    .tab-content > .active,
+    .pill-content > .active {
+    height: auto;       
+    } 
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/vendors/js/icheck/skins/square/blue.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/pages/login-register.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+ <style type="text/css">
+    .card{
+        box-shadow: none!important;
+        -webkit-box-shadow:none!important;
+        background: transparent!important;
+    }
+    .card-header{
+        background: transparent!important;
+        padding: 0;
+    }
+ /*    .position-relative .form-control.form-control-lg ~ .form-control-position{
+        top:13px;
+    }
+    .has-icon-left .form-control-position{
+            right: 75%;
+            left: inherit;
+    }*/
+ </style>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/7.17.0/firebase-app.js"></script>
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/7.17.0/firebase-auth.js"></script>
+
+   <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+        apiKey: "AIzaSyCZXlzKY_lb_DreT9yMsL4QCXnP4A7dcVA",
+        authDomain: "cmsapp-be20e.firebaseapp.com",
+        databaseURL: "https://cmsapp-be20e.firebaseio.com",
+        projectId: "cmsapp-be20e",
+        storageBucket: "cmsapp-be20e.appspot.com",
+        messagingSenderId: "480692372609",
+        appId: "1:480692372609:web:5afeec782513cccfe27980",
+        measurementId: "G-4CH5MWRVGZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth();
+    </script>
+  
+
+
+</head>
+  <body data-open="hover" data-menu="horizontal-menu" data-col="2-columns" class="horizontal-layout horizontal-menu 2-columns   menu-expanded">
+  
+    <noscript><strong>We're sorry but Application doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+        <div class="app-content content" style="background-image: url(NEW.png)!important;background-repeat: no-repeat;background-size: cover;">
+      <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body" style="margin-top: 100px">
+      
+    <div class="col-12 d-flex align-items-center justify-content-center">
+         <div class="col-md-7 col-lg-7 d-lg-none d-xl-block d-lg-none d-xl-block">
+        
+         </div>
+        <div class="col-md-4 p-0 col-xs-12 col-sm-12 col-lg-4">
+             
+             <div class="card border-grey border-lighten-3 m-0 animated zoomIn">
+                <div class="card-header border-0">
+                    <div class="card-title text-center">
+                        <div class="p-1"><img src="Logo.png" alt="branding logo" style="max-height: 100px;" class="img img-responsive"></div>
+                    </div>
+                    
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form-horizontal form-simple">
+              
+                            <fieldset class="form-group position-relative has-icon-left mb-0">
+                                <input type="email"  class="form-control form-control-lg input-lg" id="userid" placeholder="Email" required="required" style="border-radius: 50px;width: 70%;display: block;margin: 5px auto;background: transparent;color:white"/>
+                               
+                            </fieldset>
+                            <fieldset class="form-group position-relative has-icon-left">
+                                <input type="password" class="form-control form-control-lg input-lg" id="pin" placeholder="Pin" required="required" style="border-radius: 50px;width: 70%;display: block;margin: 5px auto;background: transparent;color:white"/>
+                      
+                            </fieldset>
+                            <button onclick = "login()" class="btn btn-lg" style="background: #bf9f62;color:white;display: block;margin: auto;border-radius: 50px;width: 50%"><i class="ft-unlock"></i> Login</button>
+                            <br><br>
+                        </form>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+     </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="index.js"></script>
+
+
+    <footer class="footer footer-static navbar-shadow col-xs-hidden" style=background-color:#132e54!important;color:white;z-index:100000>
+      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2 container center-layout"><span class="d-block d-md-inline-block" style="color: white">Copyright  &copy; 2020, All rights reserved. Powered By Katot Inc.</span></p>
+    </footer>
+
+  </body>
+</html>    
